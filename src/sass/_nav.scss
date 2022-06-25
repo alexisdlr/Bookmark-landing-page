@@ -1,0 +1,95 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2.5rem;
+
+  .navbar {
+   @include flex(row,start, center);
+    .navlinks {
+      @include flex(row, center, center);
+      gap: 3rem;
+      margin-left: auto;
+
+      .navlink:hover a {
+        transition: 300ms all ease-in-out;
+        color: $soft-red;
+      }
+      .btn-login {
+        @include btn($soft-red, $soft-red);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        &:hover {
+          background-color: #fff;
+          color: $soft-red;
+          
+        }
+      }
+
+    }
+    .hamburger {
+      display: none;
+      margin-left: auto;
+    }
+
+  }
+}
+
+
+
+@media (max-width: 800px) {
+  .container {
+    .navbar {
+
+      .hamburger {
+        display: block;
+        z-index: 99;
+        transform: scale(1.2);
+      }
+      
+      &.open .navbar-brand {
+          z-index: 100;
+          svg path {
+            fill: white;
+          }
+      }
+      .navlinks {
+          position: fixed;
+          inset: 0;
+          top: 0;
+          height: 100vh;
+          background-color: hsla(229, 31%, 21%, 0.87);
+          z-index: 99;
+          flex-direction: column;
+          padding: 2rem;
+          backdrop-filter: blur(6px);
+          opacity: 0;
+          pointer-events: none;
+        
+      }
+      &.open .navlinks {
+        opacity: 1;
+        pointer-events: auto;
+        transition: all 0.2s ease-in-out;
+        a {
+          color: white;
+          font-size: 1.2rem;
+        }
+      }
+    
+      &.open .navlink:last-of-type {
+        align-self: stretch;
+      }
+      &.open .btn-login {
+        width: 100%;
+        font-size: 1rem;
+      }
+    
+      &.open .btn-login:hover {
+        background-color: transparent;
+        color: #fff ;
+        border-color: #fff;
+      }
+    }
+  }
+	
+}

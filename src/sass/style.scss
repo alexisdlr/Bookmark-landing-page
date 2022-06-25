@@ -1,0 +1,65 @@
+@import 'mixins';
+@import 'variables';
+@import 'nav';
+@import 'hero';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+ul {
+	list-style: none;
+	font-size: 0.75rem;
+}
+img {
+	width: 100%;
+	display: block;
+}
+
+a {
+  text-decoration: none;
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+	color: $very-dark-blue;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+p {
+	line-height: 1.5em;
+	color: $grayish-blue;
+}
+button {
+	font-family: inherit;
+	font-size: 0.75rem;
+	border: none;
+	cursor: pointer;
+	background: none;
+}
+
+// @media (max-width: 800px) {
+// 	.container {
+// 		padding: 2rem 1rem;
+// 	}
+// }

@@ -1,0 +1,17 @@
+@mixin flex ($dir, $jus, $items) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $items;
+}
+@mixin btn ($bg, $border) {
+  padding: 0.9rem 1.4rem;
+	border-radius: 0.25rem;
+	letter-spacing: 0.05em;
+	font-weight: 500;
+	background-color: $bg;
+	border: 2px solid $border;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	line-height: 1.5em;
+}
