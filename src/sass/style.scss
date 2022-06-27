@@ -3,6 +3,7 @@
 @import 'nav';
 @import 'hero';
 @import 'features';
+@import 'extensions';
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,15 @@ body {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	&::-webkit-scrollbar {
+		width: 12px;
+		background-color: #fff;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		border-radius: 50px;
+		background-color:$boft-blue;
+	}
 }
 ul {
 	list-style: none;

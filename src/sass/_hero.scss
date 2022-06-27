@@ -22,14 +22,7 @@
     transform-origin: left;
   }
   .round-bg {
-    position: absolute;
-    bottom: 0;
-    right: -5rem;
-    z-index: -1;
-    width: 34rem;
-    aspect-ratio: 7/4;
-    border-radius: 100rem 0 0 100rem;
-    background-color: $boft-blue;
+    @include round;
   }
   &__btns {
     display: flex;
