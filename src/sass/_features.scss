@@ -8,6 +8,7 @@
   }
   .round-bg {
     @include round;
+    
   }
 
   .round-bg {
@@ -127,7 +128,7 @@
 		max-width: 500px;
 	}
 	.features .round-bg {
-		bottom: 26%;
+		bottom: 34%;
 		width: 70%;
 	}
 	.features__list::after {
